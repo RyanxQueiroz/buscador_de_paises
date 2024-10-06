@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url('https://th.bing.com/th/id/R.31472cdad6b718627a314f44beeeadbe?rik=cjJK6L2Wi%2f8xJA&pid=ImgRaw&r=0');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.subHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inputBusca {
+  margin-bottom: 15px;
+}
+
+.inputBusca input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.inputBusca input:focus {
+  border-color: #2980b9;
+}
+
+.filtros {
+  display: flex;
+  gap: 15px;
+}
+
+.filtros input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #3498db;
+}
+
+.filtros label {
+  cursor: pointer;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+#qtPaises {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.todosPaises {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.pais {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.pais:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pais img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.pais p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+body.detalhes {
+  background-image: url('https://th.bing.com/th/id/OIP.0u-5C6SuxDKHeRhTMsnFHQHaEo?w=252&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 20px;
+  color: #4d4d4d;
+}
+
+#paisDetalhes {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#paisDetalhes h2 {
+  color: #1a5276;
+}
+
+#paisDetalhes img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 200px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+}
+
+#paisDetalhes p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #3a3a3a;
+}
+
+#paisDetalhes strong {
+  color: #2980b9;
+}
+
+#mapsLink {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+#mapsLink:hover {
+  background-color: #2980b9;
+}
+
+@media (min-width: 768px) {
+  .subHeader {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .inputBusca {
+    margin-bottom: 0;
+  }
+}
+
+#loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #3498db;
+  z-index: 9999;
+}
